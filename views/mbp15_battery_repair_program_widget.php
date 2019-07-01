@@ -31,6 +31,21 @@ $(document).on('appUpdate', function(e, lang) {
 		if(data.ineligible != "0"){
 			panel.append(' <a href="'+baseUrl+'#E01-Ineligible" class="btn btn-success"><span class="bigger-150">'+data.ineligible+'</span><br>&nbsp;&nbsp;'+i18n.t('Ineligible')+'&nbsp;&nbsp;</a>');
 		}
-    });
+		if(data.processing_error != "0"){
+			panel.append(' <a href="'+baseUrl+'#E99-ProcessingError" class="btn btn-info"><span class="bigger-150">'+data.processing_error+'</span><br>&nbsp;&nbsp;'+i18n.t('Processing Error')+'&nbsp;&nbsp;</a>');
+		}
+		if(data.empty_serial != "0"){
+			panel.append(' <a href="'+baseUrl+'#FE01-EmptySerial" class="btn btn-info"><span class="bigger-150">'+data.empty_serial+'</span><br>&nbsp;&nbsp;'+i18n.t('Empty SN')+'&nbsp;&nbsp;</a>');
+		}
+		if(data.invalid_serial != "0"){
+			panel.append(' <a href="'+baseUrl+'#FE02-InvalidSerial" class="btn btn-info"><span class="bigger-150">'+data.invalid_serial+'</span><br>&nbsp;&nbsp;'+i18n.t('Invalid SN')+'&nbsp;&nbsp;</a>');
+		}
+		if(data.unexpected_response != "0"){
+			panel.append(' <a href="'+baseUrl+'#Err1-UnexpectedResponse" class="btn btn-info"><span class="bigger-150">'+data.unexpected_response+'</span><br>&nbsp;&nbsp;'+i18n.t('Unexpected Repsonse')+'&nbsp;&nbsp;</a>');
+		}
+ 		if(data.ineligible_model != "0"){
+			panel.append(' <a href="'+baseUrl+'#Msg1-IneligibleModel" class="btn btn-info"><span class="bigger-150">'+data.ineligible_model+'</span><br>&nbsp;&nbsp;'+i18n.t('Ineligible Model')+'&nbsp;&nbsp;</a>');
+		}
+   });
 });
 </script>
