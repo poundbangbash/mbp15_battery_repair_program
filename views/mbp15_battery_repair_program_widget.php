@@ -34,6 +34,6 @@ $(document).on('appUpdate', function(e, lang) {
 		if(data.ineligible != "0"){
 			panel.append(' <a href="'+baseUrl+'#E01-Ineligible" class="btn btn-success"><span class="bigger-150">'+data.ineligible+'</span><br>&nbsp;&nbsp;'+i18n.t('ineligible')+'&nbsp;&nbsp;</a>');
 		}
-\    });
+    });
 });
 </script>

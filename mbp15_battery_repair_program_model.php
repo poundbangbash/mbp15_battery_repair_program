@@ -34,15 +34,15 @@ class Mbp15_battery_repair_program_model extends \Model
      **/
     public function get_mbp15_battery_repair_program_state()
     {
-        $sql = "SELECT COUNT(CASE WHEN eligibiltiy = 'E00-Eligible' THEN 1 END) AS eligible,
-				COUNT(CASE WHEN eligibiltiy = 'E01-Ineligible' THEN 1 END) AS ineligible,
-				COUNT(CASE WHEN eligibiltiy = 'E99-ProcessingError' THEN 1 END) AS processing_error,
-				COUNT(CASE WHEN eligibiltiy = 'FE01-EmptySerial' THEN 1 END) AS empty_serial,
-				COUNT(CASE WHEN eligibiltiy = 'FE02-InvalidSerial' THEN 1 END) AS invalid_serial,
-				COUNT(CASE WHEN eligibiltiy = 'Err1-UnexpectedResponse' THEN 1 END) AS unexpected_response,
-				COUNT(CASE WHEN eligibiltiy = 'Err2-NotQueried-InvalidGuidLength' THEN 1 END) AS invalid_guid_length,
-				COUNT(CASE WHEN eligibiltiy = 'Err3-NotQueried-InvalidSerialLength' THEN 1 END) AS invalid_serial_length,
-				COUNT(CASE WHEN eligibiltiy = 'Msg1-IneligibleModel' THEN 1 END) AS ineligible_model
+        $sql = "SELECT COUNT(CASE WHEN eligibility = 'E00-Eligible' THEN 1 END) AS eligible,
+				COUNT(CASE WHEN eligibility = 'E01-Ineligible' THEN 1 END) AS ineligible,
+				COUNT(CASE WHEN eligibility = 'E99-ProcessingError' THEN 1 END) AS processing_error,
+				COUNT(CASE WHEN eligibility = 'FE01-EmptySerial' THEN 1 END) AS empty_serial,
+				COUNT(CASE WHEN eligibility = 'FE02-InvalidSerial' THEN 1 END) AS invalid_serial,
+				COUNT(CASE WHEN eligibility = 'Err1-UnexpectedResponse' THEN 1 END) AS unexpected_response,
+				COUNT(CASE WHEN eligibility = 'Err2-NotQueried-InvalidGuidLength' THEN 1 END) AS invalid_guid_length,
+				COUNT(CASE WHEN eligibility = 'Err3-NotQueried-InvalidSerialLength' THEN 1 END) AS invalid_serial_length,
+				COUNT(CASE WHEN eligibility = 'Msg1-IneligibleModel' THEN 1 END) AS ineligible_model
 				FROM mbp15_battery_repair_program
 				LEFT JOIN reportdata USING(serial_number)
 				".get_machine_group_filter();
