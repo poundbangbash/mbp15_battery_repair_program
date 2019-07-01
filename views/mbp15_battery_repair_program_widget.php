@@ -26,10 +26,10 @@ $(document).on('appUpdate', function(e, lang) {
 		
 		// Set statuses
 		if(data.eligible != "0"){
-			panel.append(' <a href="'+baseUrl+'#E00-Eligible" class="btn btn-danger"><span class="bigger-150">'+data.eligible+'</span><br>&nbsp;&nbsp;'+i18n.t('eligible')+'&nbsp;&nbsp;</a>');
+			panel.append(' <a href="'+baseUrl+'#E00-Eligible" class="btn btn-danger"><span class="bigger-150">'+data.eligible+'</span><br>&nbsp;&nbsp;'+i18n.t('Eligible')+'&nbsp;&nbsp;</a>');
 		}
 		if(data.ineligible != "0"){
-			panel.append(' <a href="'+baseUrl+'#E01-Ineligible" class="btn btn-success"><span class="bigger-150">'+data.ineligible+'</span><br>&nbsp;&nbsp;'+i18n.t('ineligible')+'&nbsp;&nbsp;</a>');
+			panel.append(' <a href="'+baseUrl+'#E01-Ineligible" class="btn btn-success"><span class="bigger-150">'+data.ineligible+'</span><br>&nbsp;&nbsp;'+i18n.t('Ineligible')+'&nbsp;&nbsp;</a>');
 		}
     });
 });
