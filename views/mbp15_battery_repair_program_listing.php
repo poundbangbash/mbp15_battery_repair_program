@@ -69,7 +69,21 @@ new Mbp15_battery_repair_program_model;
 				var link = mr.getClientDetailLink(name, sn, '<?php echo url(); ?>/');
 				$('td:eq(0)', nRow).html(link);
                                                 
-	        }
+	        
+		// Format Check-In timestamp
+	        	var checkin = $('td:eq(4)', nRow).html();
+	        	if(checkin == '') {
+			} else { 
+				var date = new Date(checkin * 1000);
+			}
+			
+
+			if(date) {
+				$('td:eq(4)', nRow).html('<span title="'+date+'">'+moment(date).fromNow()+'</span>');
+			} else if(!date) {
+				$('td:eq(4)', nRow).html('<span title=""></span>');
+			}
+		}
 	    });
 	});
 </script>
