@@ -21,8 +21,8 @@ new Mbp15_battery_repair_program_model;
 		      	<th data-i18n="listing.computername" data-colname='machine.computer_name'></th>
 		      	<th data-i18n="serial" data-colname='reportdata.serial_number'></th>
 		        <th data-i18n="department.username" data-colname='reportdata.long_username'></th>
-		      	<th data-i18n="mbp15_battery_repair_program.listing.eligibility" data-colname='mbp15_battery_repair_program.eligibility'></th>
-		      	<th data-i18n="mbp15_battery_repair_program.listing.datecheck" data-colname='mbp15_battery_repair_program.datecheck'></th>
+		      	<th data-i18n="mbp15_battery_repair_program.eligibility" data-colname='mbp15_battery_repair_program.eligibility'></th>
+		      	<th data-i18n="mbp15_battery_repair_program.datecheck" data-colname='mbp15_battery_repair_program.datecheck'></th>
 		      </tr>
 		    </thead>
 		    <tbody>
