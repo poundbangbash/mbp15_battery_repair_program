@@ -25,11 +25,8 @@ $(document).on('appUpdate', function(e, lang) {
 		panel.empty();
 		
 		// Set statuses
-		if(data.unknown != "0"){
-		panel.append(' <a href="'+baseUrl+'#unknown" class="btn btn-info"><span class="bigger-150">'+data.unknown+'</span><br>'+i18n.t('unknown')+'</a>');
-		}
 		if(data.eligible != "0"){
-			panel.append(' <a href="'+baseUrl+'#E00-Eligible" class="btn btn-danger"><span class="bigger-150">'+data.elgibile+'</span><br>&nbsp;&nbsp;'+i18n.t('eligible')+'&nbsp;&nbsp;</a>');
+			panel.append(' <a href="'+baseUrl+'#E00-Eligible" class="btn btn-danger"><span class="bigger-150">'+data.eligible+'</span><br>&nbsp;&nbsp;'+i18n.t('eligible')+'&nbsp;&nbsp;</a>');
 		}
 		if(data.ineligible != "0"){
 			panel.append(' <a href="'+baseUrl+'#E01-Ineligible" class="btn btn-success"><span class="bigger-150">'+data.ineligible+'</span><br>&nbsp;&nbsp;'+i18n.t('ineligible')+'&nbsp;&nbsp;</a>');
