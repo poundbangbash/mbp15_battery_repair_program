@@ -4,7 +4,7 @@ class Mbp15_battery_repair_program_model extends \Model
 
     public function __construct($serial = '')
     {
-        parent::__construct('id', 'wifi'); //primary key, tablename
+        parent::__construct('id', 'mbp15_battery_repair_program'); //primary key, tablename
         $this->rs['id'] = 0;
         $this->rs['serial_number'] = $serial;
         $this->rs['datecheck'] = '';
