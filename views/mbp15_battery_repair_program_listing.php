@@ -23,6 +23,8 @@ new Mbp15_battery_repair_program_model;
 		        <th data-i18n="department.username" data-colname='reportdata.long_username'></th>
 		      	<th data-i18n="mbp15_battery_repair_program.eligibility" data-colname='mbp15_battery_repair_program.eligibility'></th>
 		      	<th data-i18n="mbp15_battery_repair_program.datecheck" data-colname='mbp15_battery_repair_program.datecheck'></th>
+		      	<th data-i18n="machine.machine_model" data-colname='machine.machine_model'></th>
+		      	<th data-i18n="description" data-colname='machine.machine_desc'></th>
 		      </tr>
 		    </thead>
 		    <tbody>
