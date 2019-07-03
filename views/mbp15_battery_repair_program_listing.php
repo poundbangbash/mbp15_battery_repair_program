@@ -3,7 +3,6 @@
 <?php //Initialize models needed for the table
 new Machine_model;
 new Reportdata_model;
-new department_model;
 new Mbp15_battery_repair_program_model;
 ?>
 
