@@ -19,7 +19,6 @@ new Mbp15_battery_repair_program_model;
 		      <tr>
 		      	<th data-i18n="listing.computername" data-colname='machine.computer_name'></th>
 		      	<th data-i18n="serial" data-colname='reportdata.serial_number'></th>
-		        <th data-i18n="department.username" data-colname='reportdata.long_username'></th>
 		      	<th data-i18n="mbp15_battery_repair_program.eligibility" data-colname='mbp15_battery_repair_program.eligibility'></th>
 		      	<th data-i18n="mbp15_battery_repair_program.datecheck" data-colname='mbp15_battery_repair_program.datecheck'></th>
 		      	<th data-i18n="machine.model" data-colname='machine.machine_model'></th>
@@ -69,15 +68,15 @@ new Mbp15_battery_repair_program_model;
 	        	var sn=$('td:eq(1)', nRow).html();
 				var link = mr.getClientDetailLink(name, sn, '<?php echo url(); ?>/');
 				$('td:eq(0)', nRow).html(link);
-                                                
-	        
+
+
 		// Format Check-In timestamp
 	        	var checkin = $('td:eq(4)', nRow).html();
 	        	if(checkin == '') {
-			} else { 
+			} else {
 				var date = new Date(checkin * 1000);
 			}
-			
+
 
 			if(date) {
 				$('td:eq(4)', nRow).html('<span title="'+date+'">'+moment(date).fromNow()+'</span>');
