@@ -2,7 +2,8 @@
 	<div class="panel panel-default" id="mbp15_battery_repair_program-state-widget">
 		<div class="panel-heading" data-container="body">
 			<h3 class="panel-title"><i class="fa fa-display"></i>
-			    <span data-i18n="mbp15_battery_repair_program.state"></span>
+				<span data-i18n="mbp15_battery_repair_program.state"></span>
+				—&nbsp;<a href="https://support.apple.com/15-inch-macbook-pro-battery-recall" target="_blank" data-i18n="mbp15_battery_repair_program.battery_program_url"></a> 
                 <list-link data-url="/show/listing/mbp15_battery_repair_program/mbp15_battery_repair_program"></list-link>
 			</h3>
 		</div>

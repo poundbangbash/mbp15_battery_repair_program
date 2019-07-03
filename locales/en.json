@@ -2,5 +2,6 @@
     "mbp15_battery_repair_program": "MacBook Pro 15-inch Battery Repair Program",
     "eligibility": "Eligibility",
     "datecheck": "Last Checked",
-    "state": "Eligibility State"
+    "state": "Battery Repair Eligibility",
+    "battery_program_url": "More info…"
 }
