@@ -63,7 +63,7 @@ todayDate=$(date -j +'%Y%m%d')
 
 # Check once a day, if the last check is older than today, proceed
 if [[ $todayDate > $(dateCheck) ]]; then
-    echo "LastCheck: $(date -j -f "%a %b %d %T %Z %Y" "`date`" "+%s")" > "$mbp15_battery_repair_program_file"
+    echo "LastCheck: $(date "+%s")" > "$mbp15_battery_repair_program_file"
     # Be nice to qualityprograms.apple.com and only query valid models by pre-qualifying:
     if [[ "$modelID" == "MacBookPro11,4" || "$modelID" == "MacBookPro11,5" ]]; then
         # 12 charlen for all serials in affected years (14 incl quote)
