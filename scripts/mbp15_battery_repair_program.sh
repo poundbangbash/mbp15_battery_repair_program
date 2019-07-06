@@ -21,14 +21,14 @@ mbp15_battery_repair_program_file="$DIR/cache/mbp15_battery_repair_program.txt"
 
 dateStamp () {
     mkdir -p "$DIR"/cache
-    echo $(date -j +'%Y%m%d') > "$DIR"/cache/.appleRecallDateStamp
+    echo $(date -j +'%Y%m%d') > "$DIR"/cache/.appleRecall062019DateStamp
 }
 
 dateCheck () {
-    if [[ ! -f "$DIR"/cache/.appleRecallDateStamp ]]; then
+    if [[ ! -f "$DIR"/cache/.appleRecall062019DateStamp ]]; then
         echo 0
     else
-        echo $(cat "$DIR"/cache/.appleRecallDateStamp)
+        echo $(cat "$DIR"/cache/.appleRecall062019DateStamp)
     fi
 }
 
