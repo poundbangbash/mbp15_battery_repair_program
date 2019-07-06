@@ -60,9 +60,11 @@ quotSerial=$(ioreg -l | grep IOPlatformSerialNumber | awk '{print $4}')
 quotGUID='"'$(uuidgen | tr "[:upper:]" "[:lower:]")'"'
 modelID=$(system_profiler SPHardwareDataType | grep "Model Identifier" | awk '{print $3}')
 todayDate=$(date -j +'%Y%m%d')
+lastCheckDate=$(dateCheck)
+daysSinceCheck=$(expr $todayDate - $lastCheckDate)
 
 # Check once a day, if the last check is older than today, proceed
-if [[ $todayDate > $(dateCheck) ]]; then
+if [[ $daysSinceCheck > 6 ]]; then
     echo "LastCheck: $(date "+%s")" > "$mbp15_battery_repair_program_file"
     # Be nice to qualityprograms.apple.com and only query valid models by pre-qualifying:
     if [[ "$modelID" == "MacBookPro11,4" || "$modelID" == "MacBookPro11,5" ]]; then
