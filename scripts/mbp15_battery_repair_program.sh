@@ -20,7 +20,11 @@ mkdir -p "$DIR/cache"
 mbp15_battery_repair_program_file="$DIR/cache/mbp15_battery_repair_program.txt"
 
 dateStamp () {
-    mkdir -p "$DIR"/cache
+    if [[ ! -d "$DIR"/cache ]]
+    then
+        mkdir -p "$DIR"/cache
+    fi
+    
     echo $(date -j +'%Y%m%d') > "$DIR"/cache/.appleRecallDateStamp
 }
 
@@ -32,12 +36,25 @@ dateCheck () {
     fi
 }
 
+beenAWeek () {
+    local currentDate=$(date -j +'%Y%m%d')
+    local dateDelta="$(($currentDate - $1))"
+    if [[ $dateDelta -gt 7 ]]
+    then
+        return 0
+    fi
+    return 1
+}
 createRecallCheckDone () {
     mkdir -p "$DIR"/cache
     echo $1 > "$DIR"/cache/.appleRecall062019CheckDone
 }
 
 stillEligible () {
+    if beenAWeek $(dateCheck); then
+        return 0
+    fi
+
     if [[ -e "$DIR"/cache/.appleRecall062019CheckDone ]]; then
         if [[ $(grep -c "E01-Ineligible" "$DIR"/cache/.appleRecall062019CheckDone) -ge 1 ]]; then
             echo "Eligibility: E01-Ineligible" >> "$mbp15_battery_repair_program_file"
